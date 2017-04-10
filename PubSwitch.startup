@@ -1,8 +1,13 @@
-ip addr add dev eth0 10.0.0.132/28
+brctl addbr pub
+
+brctl addif pub eth0
+brctl addif pub eth1
+brctl addif pub eth2
+brctl addif pub eth3
+
 ip link set dev eth0 up
-ip addr add dev eth1 10.0.0.133/28
 ip link set dev eth1 up
-ip addr add dev eth2 10.0.0.134/28
 ip link set dev eth2 up
-ip addr add dev eth3 10.0.0.135/28
 ip link set dev eth3 up
+
+ip link set dev pub up
