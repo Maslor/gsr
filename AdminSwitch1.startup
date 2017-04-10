@@ -1,11 +1,11 @@
-brctl addbr admin1
+brctl addbr admone
 
-brctl addif admin1 eth0
-brctl addif admin1 eth1
-brctl addif admin1 eth2
+brctl addif admone eth0
+brctl addif admone eth1
+brctl addif admone eth2
 
 ip link set dev eth0 up
 ip link set dev eth1 up
 ip link set dev eth2 up
 
-ip link set dev admin1 up
+ip link set dev admone up
