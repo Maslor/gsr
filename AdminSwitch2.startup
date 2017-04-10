@@ -1,8 +1,8 @@
 brctl addbr admin2
 
 brctl addif admin2 eth0
-brctl addif admin2 eth0
-brctl addif admin2 eth0
+brctl addif admin2 eth1
+brctl addif admin2 eth2
 
 ip link set dev eth0 up
 ip link set dev eth1 up
