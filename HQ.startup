@@ -12,3 +12,4 @@ ip addr add dev eth5 10.0.0.17/30
 ip link set dev eth5 up
 
 /etc/init.d/zebra start
+/etc/init.d/dhcp3-server start
