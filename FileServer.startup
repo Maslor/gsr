@@ -3,7 +3,7 @@ ip link set dev eth0 up
 
 ip route add default via 192.168.0.6
 
-useradd ftp_user -d /home/ftp
+useradd ftp_user
 echo "ftp_user:ftp_user" | chpasswd
 
 chmod 755 /home/ftp_user
