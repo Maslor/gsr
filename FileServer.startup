@@ -6,7 +6,4 @@ ip route add default via 192.168.0.6
 useradd ftp_user
 echo "ftp_user:ftp_user" | chpasswd
 
-chmod 755 /home/ftp_user
-chown ftp_user:fp_user /home/files
-
 proftpd
