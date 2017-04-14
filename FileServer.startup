@@ -4,6 +4,9 @@ ip link set dev eth0 up
 ip route add default via 192.168.0.6
 
 useradd ftp_user
+useradd ftp_user2
+
 echo "ftp_user:ftp_user" | chpasswd
+echo "ftp_user2:ftp_user2" | chpasswd
 
 proftpd
