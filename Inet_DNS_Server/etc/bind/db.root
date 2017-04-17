@@ -1,0 +1,17 @@
+$TTL   60000
+@               IN      SOA     ROOT-SERVER.    root.ROOT-SERVER. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+
+@               IN      NS      ROOT-SERVER.
+ROOT-SERVER.	IN	A	10.0.0.21
+
+bomcliente.		IN 	NS	dnsbomcliente.bomcliente.
+dnsbomcliente.bomcliente.	IN 	A	10.0.0.1
+
+contatudo.		IN	NS	dnscontatudo.contatudo.
+dnscontatudo.contatudo.	IN	A	10.0.0.129
