@@ -1,0 +1,13 @@
+$TTL    60000
+@               IN      SOA     DE_PrimServer.contatudo.gsr.    root.DE_PrimServer.contatudo.gsr. (
+                        2006031201 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@               IN      NS      DE_PrimServer.contatudo.gsr.
+DE_PrimServer          IN      A      10.0.0.129
+ProxyServer		IN	A	10.0.0.131
+MonitoringServer		IN	A	192.168.0.1
+FileServer		IN	A	192.168.0.2

@@ -1,2 +1,1 @@
-AdminServsSwitch : HQ
-PC_Director PC_Accountant PC_HR_Head: AdminServsSwitch
+PC_Director PC_Accountant PC_HR_Head: HQ

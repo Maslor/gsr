@@ -10,8 +10,6 @@ $TTL   60000
 @               IN      NS      ROOT-SERVER.
 ROOT-SERVER.	IN	A	10.0.0.21
 
-bomcliente.		IN 	NS	dnsbomcliente.bomcliente.
-dnsbomcliente.bomcliente.	IN 	A	10.0.0.1
+gsr.		IN 	NS	ROOT-SERVER.
+ROOT-SERVER.gsr.	IN 	A	10.0.0.21
 
-contatudo.		IN	NS	dnscontatudo.contatudo.
-dnscontatudo.contatudo.	IN	A	10.0.0.129
