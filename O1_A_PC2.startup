@@ -2,3 +2,5 @@ ip addr add dev eth0 192.168.0.10/29
 ip link set dev eth0 up
 
 ip route add default via 192.168.0.13
+
+export http_proxy=http://10.0.0.131:3128
