@@ -8,6 +8,15 @@ $TTL    60000
                         )
 @               IN      NS      DE_PrimServer.contatudo.gsr.
 DE_PrimServer          IN      A      10.0.0.129
+DE_SecServer		IN	A	10.0.0.130
 ProxyServer		IN	A	10.0.0.131
 MonitoringServer		IN	A	192.168.0.1
 FileServer		IN	A	192.168.0.2
+O1_A_PC1		IN	A	192.168.0.9
+O1_A_PC2		IN	A	192.168.0.10
+O2_A_PC1		IN	A	192.168.0.17
+O2_A_PC2		IN	A	192.168.0.18
+PC_Accountant		IN	A	10.0.0.145
+PC_Director		IN	A	10.0.0.146
+PC_HR_Head		IN	A	10.0.0.147
+
