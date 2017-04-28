@@ -4,3 +4,4 @@ ip link set dev eth0 up
 ip route add default via 10.0.0.136
 
 /etc/init.d/squid start
+/etc/init.d/snmpd start
