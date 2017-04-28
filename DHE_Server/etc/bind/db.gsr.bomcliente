@@ -1,11 +1,12 @@
-$TTL 60000
-@               IN      SOA     DHE_Server.bomcliente.gsr.    root.DHE_Server.bomcliente.gsr. (
-                        2006031201 ; serial
+$TTL    60000
+@               IN      SOA    	nsext.bomcliente.gsr.    root.nsext.bomcliente.gsr. (
+                        2017042202 ; serial
                         28 ; refresh
-                        14400 ; retry
+                        14 ; retry
                         3600000 ; expire
-                        15 ; negative cache ttl
+                        0 ; negative cache ttl
                         )
-@               IN      NS      DHE_Server.bomcliente.gsr.
-DHE_Server         IN      A       10.0.0.1
-E_PC		IN	A	10.0.0.2
+@           IN      NS      nsext.bomcliente.gsr.
+nsext         IN      A       10.0.0.1
+epc         IN      A       10.0.0.2
+

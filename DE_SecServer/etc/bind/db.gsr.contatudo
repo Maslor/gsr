@@ -1,0 +1,12 @@
+$TTL    60000
+@               IN      SOA    	nshq2.contatudo.gsr.    root.nshq2.contatudo.gsr. (
+                        2017042202 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@           IN      NS      nshq.contatudo.gsr.
+@           IN      NS      nshq2.contatudo.gsr.
+nshq         IN      A       10.0.0.129
+nshq2         IN      A       10.0.0.130

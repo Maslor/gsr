@@ -9,9 +9,12 @@ $TTL   60000
 @                   IN      NS      ROOT-SERVER.gsr.
 ROOT-SERVER              IN      A       10.0.0.21
 
-contatudo            IN      NS      DE_PrimServer.contatudo.gsr.
-DE_PrimServer.contatudo     IN      A       10.0.0.129
+contatudo            IN      NS      nshq2.contatudo.gsr.
+nshq2.contatudo     IN      A       10.0.0.130
 
-bomcliente            IN      NS      DHE_Server.bomcliente.gsr.
-DHE_Server.bomcliente     IN      A       10.0.0.1
+contatudo            IN      NS      nshq.contatudo.gsr.
+nshq.contatudo     IN      A       10.0.0.129
+
+bomcliente            IN      NS      nsext.bomcliente.gsr.
+nsext.bomcliente     IN      A       10.0.0.1
 

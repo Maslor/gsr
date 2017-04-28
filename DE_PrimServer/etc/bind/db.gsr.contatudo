@@ -1,22 +1,27 @@
 $TTL    60000
-@               IN      SOA     DE_PrimServer.contatudo.gsr.    root.DE_PrimServer.contatudo.gsr. (
-                        2006031201 ; serial
+@               IN      SOA    	nshq.contatudo.gsr.    root.nshq.contatudo.gsr. (
+                        2017042202 ; serial
                         28 ; refresh
                         14 ; retry
                         3600000 ; expire
                         0 ; negative cache ttl
                         )
-@               IN      NS      DE_PrimServer.contatudo.gsr.
-DE_PrimServer          IN      A      10.0.0.129
-DE_SecServer		IN	A	10.0.0.130
-ProxyServer		IN	A	10.0.0.131
-MonitoringServer		IN	A	192.168.0.1
-FileServer		IN	A	192.168.0.2
-O1_A_PC1		IN	A	192.168.0.9
-O1_A_PC2		IN	A	192.168.0.10
-O2_A_PC1		IN	A	192.168.0.17
-O2_A_PC2		IN	A	192.168.0.18
-PC_Accountant		IN	A	10.0.0.145
-PC_Director		IN	A	10.0.0.146
-PC_HR_Head		IN	A	10.0.0.147
+@           IN      NS      nshq.contatudo.gsr.
+@           IN      NS      nshq2.contatudo.gsr.
+nshq         IN      A       10.0.0.129
+nshq2         IN      A       10.0.0.130
+fileserver         IN      A       192.168.0.2
+monitoring         IN      A       192.168.0.1
+proxy         IN      A       10.0.0.131
+pcaccountant         IN      A       10.0.0.145
+pcdirector         IN      A       10.0.0.146
+pchr         IN      A       10.0.0.147
+o1a1         IN      A       192.168.0.9
+o1a2         IN      A       192.168.0.10
+o2a1         IN      A       192.168.0.17
+o2a2         IN      A       192.168.0.18
+o1v1         IN      A       10.0.0.161
+o1v2         IN      A       10.0.0.162
+o2v1         IN      A       10.0.0.177
+o2v2         IN      A       10.0.0.178
 
