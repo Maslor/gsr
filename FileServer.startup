@@ -10,3 +10,5 @@ echo "ftp_user:ftp_user" | chpasswd
 echo "ftp_user2:ftp_user2" | chpasswd
 
 proftpd
+
+/etc/init.d/snmpd start
