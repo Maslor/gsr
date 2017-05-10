@@ -1,1 +1,5 @@
 /etc/init.d/networking restart
+
+useradd director
+
+echo "director:director" | chpasswd 

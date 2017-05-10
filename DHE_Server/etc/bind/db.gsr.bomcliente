@@ -7,6 +7,14 @@ $TTL    60000
                         0 ; negative cache ttl
                         )
 @           IN      NS      nsext.bomcliente.gsr.
+@			IN	    MX 5	mail.bomcliente.gsr.
+
 nsext         IN      A       10.0.0.1
 epc         IN      A       10.0.0.2
+
+mail		IN	A	10.0.0.1
+imap		IN	A	10.0.0.1
+pop		IN	A	10.0.0.1
+
+www     	IN	    A	    10.0.0.1
 
