@@ -3,10 +3,6 @@ ip link set dev eth0 up
 
 ip route add default via 10.0.0.136
 
-
-/etc/init.d/bind start
-/etc/init.d/snmpd start
-
 # Change permissions of the mail spool directory, so that the guest user is
 # allowed to write lock files.
 chmod a+w /var/spool/mail
@@ -36,5 +32,8 @@ echo "porto-contab1:porto-contab1" | chpasswd
 echo "porto-contab2:porto-contab2" | chpasswd
 echo "geral:geral" | chpasswd
 
+
+/etc/init.d/bind start
+/etc/init.d/snmpd start
 /etc/init.d/exim4 start
 /etc/init.d/inetd start
