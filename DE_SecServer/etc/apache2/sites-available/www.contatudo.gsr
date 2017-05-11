@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+        ServerAdmin webmaster@contatudo.gsr
+        ServerName  www.contatudo.gsr
+
+        DirectoryIndex index.html
+        DocumentRoot /var/www/www.contatudo.gsr/html/
+
+        ErrorLog /var/www/www.contatudo.gsr/logs/error.log
+        CustomLog /var/www/www.contatudo.gsr/logs/access.log combined
+</VirtualHost>
