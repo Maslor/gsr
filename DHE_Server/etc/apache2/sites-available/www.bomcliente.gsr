@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+        ServerAdmin webmaster@bomcliente.gsr
+        ServerName  www.bomcliente.gsr
+
+        DirectoryIndex index.html
+        DocumentRoot /var/www/www.bomcliente.gsr/html/
+
+        ErrorLog /var/www/www.bomcliente.gsr/logs/error.log
+        CustomLog /var/www/www.bomcliente.gsr/logs/access.log combined
+</VirtualHost>

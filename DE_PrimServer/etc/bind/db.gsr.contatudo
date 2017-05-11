@@ -31,4 +31,8 @@ mail		IN	A	10.0.0.129
 imap		IN	A	10.0.0.129
 pop		IN	A	10.0.0.129
 
+www     	IN	    A	    10.0.0.130
+intranet    IN      A       10.0.0.130
+clientes    IN      A       10.0.0.130
+
 
