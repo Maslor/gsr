@@ -24,5 +24,7 @@ o1v1         IN      A       10.0.0.161
 o1v2         IN      A       10.0.0.162
 o2v1         IN      A       10.0.0.177
 o2v2         IN      A       10.0.0.178
-www         IN      CNAME       contatudo.gsr
+www     	IN	    A	    10.0.0.130
+intranet    IN      A       10.0.0.130
+clientes    IN      A       10.0.0.130
 

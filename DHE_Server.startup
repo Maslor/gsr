@@ -3,5 +3,7 @@ ip link set dev eth0 up
 
 ip route add default via 10.0.0.6
 
+a2ensite www.bomcliente.gsr
+
 /etc/init.d/bind start
 /etc/init.d/apache2 start

@@ -10,3 +10,22 @@ $TTL    60000
 @           IN      NS      nshq2.contatudo.gsr.
 nshq         IN      A       10.0.0.129
 nshq2         IN      A       10.0.0.130
+fileserver         IN      A       192.168.0.2
+monitoring         IN      A       192.168.0.1
+proxy         IN      A       10.0.0.131
+pcaccountant         IN      A       10.0.0.145
+pcdirector         IN      A       10.0.0.146
+pchr         IN      A       10.0.0.147
+o1a1         IN      A       192.168.0.9
+o1a2         IN      A       192.168.0.10
+o2a1         IN      A       192.168.0.17
+o2a2         IN      A       192.168.0.18
+o1v1         IN      A       10.0.0.161
+o1v2         IN      A       10.0.0.162
+o2v1         IN      A       10.0.0.177
+o2v2         IN      A       10.0.0.178
+www     	IN	    A	    10.0.0.130
+intranet    IN      A       10.0.0.130
+clientes    IN      A       10.0.0.130
+
+
