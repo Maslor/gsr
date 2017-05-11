@@ -3,7 +3,19 @@ ip link set dev eth0 up
 
 ip route add default via 10.0.0.6
 
+# Change permissions of the mail spool directory, so that the guest user is
+# allowed to write lock files.
+chmod a+w /var/spool/mail
+# Change permissions of the exim4 configuration file, to avoid errors due to
+# loose permissions
+chmod go-rw /etc/exim4/exim4.conf
+
+useradd info
+echo "info:info" | chpasswd
+
 a2ensite www.bomcliente.gsr
 
 /etc/init.d/bind start
 /etc/init.d/apache2 start
+/etc/init.d/exim4 start
+/etc/init.d/inetd start

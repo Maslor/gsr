@@ -2,3 +2,9 @@ ip addr add dev eth0 192.168.0.17/29
 ip link set dev eth0 up
 
 ip route add default via 192.168.0.21
+
+useradd porto
+useradd porto-contab1
+
+echo "porto:porto" | chpasswd
+echo "porto-contab1:porto-contab1" | chpasswd

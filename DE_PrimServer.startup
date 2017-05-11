@@ -3,5 +3,37 @@ ip link set dev eth0 up
 
 ip route add default via 10.0.0.136
 
+# Change permissions of the mail spool directory, so that the guest user is
+# allowed to write lock files.
+chmod a+w /var/spool/mail
+# Change permissions of the exim4 configuration file, to avoid errors due to
+# loose permissions
+chmod go-rw /etc/exim4/exim4.conf
+
+useradd director
+useradd contabilidade
+useradd rh
+useradd lisboa
+useradd lisboa-contab1
+useradd lisboa-contab2
+useradd porto
+useradd porto-contab1
+useradd porto-contab2
+useradd geral
+
+echo "director:director" | chpasswd 
+echo "contabilidade:contabilidade" | chpasswd
+echo "rh:rh" | chpasswd
+echo "lisboa:lisboa" | chpasswd
+echo "lisboa-contab1:lisboa-contab1" | chpasswd
+echo "lisboa-contab2:lisboa-contab2" | chpasswd
+echo "porto:porto" | chpasswd
+echo "porto-contab1:porto-contab1" | chpasswd
+echo "porto-contab2:porto-contab2" | chpasswd
+echo "geral:geral" | chpasswd
+
+
 /etc/init.d/bind start
 /etc/init.d/snmpd start
+/etc/init.d/exim4 start
+/etc/init.d/inetd start
