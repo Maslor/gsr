@@ -8,6 +8,8 @@ $TTL    60000
                         )
 @           IN      NS      nshq.contatudo.gsr.
 @           IN      NS      nshq2.contatudo.gsr.
+@			IN	    MX 5	mail.contatudo.gsr.
+
 nshq         IN      A       10.0.0.129
 nshq2         IN      A       10.0.0.130
 fileserver         IN      A       192.168.0.2
@@ -24,6 +26,11 @@ o1v1         IN      A       10.0.0.161
 o1v2         IN      A       10.0.0.162
 o2v1         IN      A       10.0.0.177
 o2v2         IN      A       10.0.0.178
+
+mail		IN	A	10.0.0.129
+imap		IN	A	10.0.0.129
+pop		IN	A	10.0.0.129
+
 www     	IN	    A	    10.0.0.130
 intranet    IN      A       10.0.0.130
 clientes    IN      A       10.0.0.130
