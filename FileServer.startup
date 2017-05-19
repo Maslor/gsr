@@ -11,6 +11,14 @@ echo "ftp_user:ftp_user" | chpasswd
 echo "ftp_user2:ftp_user2" | chpasswd
 echo "file-user:password" | chpasswd
 
+chown file-user:file-user /home/file-user
+chown file-user:file-user /home/file-user/.ssh
+chown file-user:file-user /home/file-user/.ssh/*
+
+chmod 700 /home/file-user
+chmod 700 /home/file-user/.ssh
+chmod 700 /home/file-user/.ssh/*
+
 proftpd
 
 /etc/init.d/snmpd start

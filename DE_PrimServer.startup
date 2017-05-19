@@ -34,6 +34,14 @@ echo "porto-contab2:porto-contab2" | chpasswd
 echo "geral:geral" | chpasswd
 echo "prim-user:password" | chpasswd
 
+chown prim-user:prim-user /home/prim-user
+chown prim-user:prim-user /home/prim-user/.ssh
+chown prim-user:prim-user /home/prim-user/.ssh/*
+
+chmod 700 /home/prim-user
+chmod 700 /home/prim-user/.ssh
+chmod 700 /home/prim-user/.ssh/*
+
 /etc/init.d/bind start
 /etc/init.d/snmpd start
 /etc/init.d/exim4 start

@@ -11,6 +11,14 @@ env LANG=C /usr/bin/mrtg /etc/mrtg.cfg
 adduser --disabled-password --geco "" mon-user
 echo "mon-user:password" | chpasswd
 
+chown mon-user:mon-user /home/mon-user
+chown mon-user:mon-user /home/mon-user/.ssh
+chown mon-user:mon-user /home/mon-user/.ssh/*
+
+chmod 700 /home/mon-user
+chmod 700 /home/mon-user/.ssh
+chmod 700 /home/mon-user/.ssh/*
+
 /etc/init.d/apache2 restart
 /etc/init.d/ssh start
 
