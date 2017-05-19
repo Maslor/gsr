@@ -10,16 +10,16 @@ chmod a+w /var/spool/mail
 # loose permissions
 chmod go-rw /etc/exim4/exim4.conf
 
-useradd director
-useradd contabilidade
-useradd rh
-useradd lisboa
-useradd lisboa-contab1
-useradd lisboa-contab2
-useradd porto
-useradd porto-contab1
-useradd porto-contab2
-useradd geral
+adduser --disabled-password --gecos "" director
+adduser --disabled-password --gecos "" contabilidade
+adduser --disabled-password --gecos "" rh
+adduser --disabled-password --gecos "" lisboa
+adduser --disabled-password --gecos "" lisboa-contab1
+adduser --disabled-password --gecos "" lisboa-contab2
+adduser --disabled-password --gecos "" porto
+adduser --disabled-password --gecos "" porto-contab1
+adduser --disabled-password --gecos "" porto-contab2
+adduser --disabled-password --gecos "" geral
 
 echo "director:director" | chpasswd 
 echo "contabilidade:contabilidade" | chpasswd
