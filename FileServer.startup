@@ -5,10 +5,13 @@ ip route add default via 192.168.0.6
 
 useradd ftp_user
 useradd ftp_user2
+adduser --disabled-password --geco "" file-user
 
 echo "ftp_user:ftp_user" | chpasswd
 echo "ftp_user2:ftp_user2" | chpasswd
+echo "file-user:password" | chpasswd
 
 proftpd
 
 /etc/init.d/snmpd start
+/etc/init.d/ssh start

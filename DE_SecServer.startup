@@ -7,7 +7,11 @@ a2ensite intranet.contatudo.gsr
 a2ensite www.contatudo.gsr
 a2ensite clientes.contatudo.gsr
 
+adduser --disabled-password --geco "" sec-user
+echo "sec-user:password" | chpasswd
+
 /etc/init.d/bind start
 /etc/init.d/snmpd start
 /etc/init.d/apache2 start
+/etc/init.d/ssh start
 
