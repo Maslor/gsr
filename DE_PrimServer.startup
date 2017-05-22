@@ -20,6 +20,7 @@ adduser --disabled-password --gecos "" porto
 adduser --disabled-password --gecos "" porto-contab1
 adduser --disabled-password --gecos "" porto-contab2
 adduser --disabled-password --gecos "" geral
+adduser --disabled-password --geco "" prim-user
 
 echo "director:director" | chpasswd 
 echo "contabilidade:contabilidade" | chpasswd
@@ -31,9 +32,18 @@ echo "porto:porto" | chpasswd
 echo "porto-contab1:porto-contab1" | chpasswd
 echo "porto-contab2:porto-contab2" | chpasswd
 echo "geral:geral" | chpasswd
+echo "prim-user:password" | chpasswd
 
+chown prim-user:prim-user /home/prim-user
+chown prim-user:prim-user /home/prim-user/.ssh
+chown prim-user:prim-user /home/prim-user/.ssh/*
+
+chmod 700 /home/prim-user
+chmod 700 /home/prim-user/.ssh
+chmod 700 /home/prim-user/.ssh/*
 
 /etc/init.d/bind start
 /etc/init.d/snmpd start
 /etc/init.d/exim4 start
 /etc/init.d/inetd start
+/etc/init.d/ssh start

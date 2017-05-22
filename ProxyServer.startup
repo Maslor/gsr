@@ -3,5 +3,17 @@ ip link set dev eth0 up
 
 ip route add default via 10.0.0.136
 
+adduser --disabled-password --geco "" proxy-user
+echo "proxy-user:password" | chpasswd
+
+chown proxy-user:proxy-user /home/proxy-user
+chown proxy-user:proxy-user /home/proxy-user/.ssh
+chown proxy-user:proxy-user /home/proxy-user/.ssh/*
+
+chmod 700 /home/proxy-user
+chmod 700 /home/proxy-user/.ssh
+chmod 700 /home/proxy-user/.ssh/*
+
 /etc/init.d/squid start
 /etc/init.d/snmpd start
+/etc/init.d/ssh start
