@@ -1,0 +1,2 @@
+ssh -L 8080:fileserver.contatudo.gsr:22 proxy-user@proxy.contatudo.gsr
+ssh file-user@localhost -p 8080
