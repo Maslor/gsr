@@ -4,3 +4,5 @@ ip route add default via 10.0.0.65
 
 chmod 700 /root/.ssh
 chmod 700 /root/.ssh/*
+
+chmod 700 /root/c*
