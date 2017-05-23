@@ -18,4 +18,3 @@ a2ensite www.bomcliente.gsr
 /etc/init.d/bind start
 /etc/init.d/apache2 start
 /etc/init.d/exim4 start
-/etc/init.d/inetd start
