@@ -29,6 +29,14 @@ $TTL    1
 130         PTR        www.contatudo.gsr.
 130         PTR        intranet.contatudo.gsr.
 130         PTR        clientes.contatudo.gsr.
-
+136         PTR        router.hq.
+152         PTR        router.hq.
+17         PTR        router.hq.
+18         PTR        router.internet.
+25         PTR        router.internet.
+22         PTR        router.internet.
+179         PTR        router.office2.
+163         PTR        router.office1.
+6         PTR        router.external.
 
 
