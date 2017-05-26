@@ -11,9 +11,23 @@ ip link set dev eth4 up
 ip addr add dev eth5 10.0.0.17/30
 ip link set dev eth5 up
 
+ip route add 10.0.2.80/28 via 10.0.0.130
+
 /etc/init.d/zebra start
 /etc/init.d/dhcp3-server start
 /etc/init.d/snmpd start
+
+#PROXY
+iptables -t nat -A PREROUTING -i eth0 -s ! 10.0.0.131 -p tcp --dport 80 -j DNAT --to 10.0.0.131:3128
+iptables -t nat -A POSTROUTING -o eth0 -s 10.0.0.176/28 -d 10.0.0.131 -j SNAT --to 10.0.0.136
+iptables -A FORWARD -s 10.0.0.176/28 -d 10.0.0.131 -i eth0 -o eth0 -p tcp --dport 3128 -j ACCEPT
+
+iptables -t nat -A PREROUTING -i eth1 -s ! 10.0.0.131 -p tcp --dport 80 -j DNAT --to 10.0.0.131:3128
+iptables -t nat -A POSTROUTING -o eth1 -s 10.0.0.160/28 -d 10.0.0.131 -j SNAT --to 10.0.0.136
+iptables -A FORWARD -s 10.0.0.160/28 -d 10.0.0.131 -i eth1 -o eth1 -p tcp --dport 3128 -j ACCEPT
+
+iptables -A FORWARD -i eth5 -p TCP --dport 80 -j ACCEPT
+iptables -A FORWARD -s ! 10.0.0.131 -p TCP --dport 80 -j DROP 
 
 #geral
 iptables -A FORWARD -i eth5 -m state --state ESTABLISHED -j ACCEPT
@@ -50,13 +64,6 @@ iptables -A FORWARD -i eth5 -o eth3 -d 10.0.0.131 -p TCP --dport 22 -j ACCEPT #s
 #drops
 iptables -A FORWARD -s 192.168.0.0/16 -o eth5 -j DROP
 iptables -A FORWARD -i eth5 -j DROP
-
-
-
-
-
-
-
 
 
 

@@ -1,0 +1,73 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=PT, ST=LX, L=Lisbon, O=IST, CN=IST CA/emailAddress=director@contatudo.gsr
+        Validity
+            Not Before: May 23 14:58:37 2017 GMT
+            Not After : May 21 14:58:37 2027 GMT
+        Subject: C=PT, ST=LX, L=Lisbon, O=IST, CN=server/emailAddress=director@contatudo.gsr
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:c1:ed:24:dd:2b:20:78:24:bc:81:a7:32:07:07:
+                    f2:b4:fb:e7:25:07:2a:f1:0f:f3:fa:f0:76:39:5f:
+                    29:16:76:a3:f2:5b:37:27:93:65:b7:59:86:52:1b:
+                    d6:4e:3e:5b:92:06:8d:57:b4:8f:98:0d:fc:ea:e7:
+                    d6:6b:cd:62:0d:e5:64:d9:eb:59:21:d2:55:48:0f:
+                    4e:f4:ac:ad:2d:a9:63:bf:82:6e:25:98:b2:ff:ab:
+                    43:17:2e:37:06:66:11:b6:44:6c:5b:36:8b:94:65:
+                    e1:54:94:cc:f3:11:91:a3:42:15:4d:96:17:18:57:
+                    6d:9c:8b:d2:6d:c1:1a:5a:25
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Cert Type: 
+                SSL Server
+            Netscape Comment: 
+                Easy-RSA Generated Server Certificate
+            X509v3 Subject Key Identifier: 
+                33:AF:02:DA:AC:C5:2E:E5:FB:C3:69:71:22:89:B2:60:7E:B7:BD:79
+            X509v3 Authority Key Identifier: 
+                keyid:B6:14:92:A8:A8:00:E1:EF:84:EC:22:8C:A4:46:D7:CF:73:A9:09:3B
+                DirName:/C=PT/ST=LX/L=Lisbon/O=IST/CN=IST CA/emailAddress=director@contatudo.gsr
+                serial:8C:EC:F6:00:B6:0D:7A:E0
+
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+    Signature Algorithm: sha1WithRSAEncryption
+        77:15:bb:bd:df:9c:68:b8:3c:d9:9f:88:5d:f5:29:e4:55:ef:
+        b9:fc:1c:3d:af:89:c1:f5:68:c1:d1:a5:82:49:fd:b1:33:1d:
+        60:65:db:09:19:a0:62:2d:63:60:ff:67:20:94:f2:86:00:2f:
+        23:42:76:42:80:1f:20:c5:fe:60:76:01:3a:f8:0e:c1:10:24:
+        31:08:00:6e:00:ae:6e:ca:4c:3f:79:8b:7e:85:c3:31:df:f1:
+        98:dd:57:0b:42:06:eb:77:7f:43:6a:ec:82:21:ad:7d:5d:9c:
+        ab:e5:d0:48:ae:cb:6c:67:bd:c9:4c:ab:52:1a:0b:2b:d6:2c:
+        0b:8c
+-----BEGIN CERTIFICATE-----
+MIIDmTCCAwKgAwIBAgIBATANBgkqhkiG9w0BAQUFADBxMQswCQYDVQQGEwJQVDEL
+MAkGA1UECBMCTFgxDzANBgNVBAcTBkxpc2JvbjEMMAoGA1UEChMDSVNUMQ8wDQYD
+VQQDEwZJU1QgQ0ExJTAjBgkqhkiG9w0BCQEWFmRpcmVjdG9yQGNvbnRhdHVkby5n
+c3IwHhcNMTcwNTIzMTQ1ODM3WhcNMjcwNTIxMTQ1ODM3WjBxMQswCQYDVQQGEwJQ
+VDELMAkGA1UECBMCTFgxDzANBgNVBAcTBkxpc2JvbjEMMAoGA1UEChMDSVNUMQ8w
+DQYDVQQDEwZzZXJ2ZXIxJTAjBgkqhkiG9w0BCQEWFmRpcmVjdG9yQGNvbnRhdHVk
+by5nc3IwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMHtJN0rIHgkvIGnMgcH
+8rT75yUHKvEP8/rwdjlfKRZ2o/JbNyeTZbdZhlIb1k4+W5IGjVe0j5gN/Orn1mvN
+Yg3lZNnrWSHSVUgPTvSsrS2pY7+CbiWYsv+rQxcuNwZmEbZEbFs2i5Rl4VSUzPMR
+kaNCFU2WFxhXbZyL0m3BGlolAgMBAAGjggE/MIIBOzAJBgNVHRMEAjAAMBEGCWCG
+SAGG+EIBAQQEAwIGQDA0BglghkgBhvhCAQ0EJxYlRWFzeS1SU0EgR2VuZXJhdGVk
+IFNlcnZlciBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUM68C2qzFLuX7w2lxIomyYH63
+vXkwgaMGA1UdIwSBmzCBmIAUthSSqKgA4e+E7CKMpEbXz3OpCTuhdaRzMHExCzAJ
+BgNVBAYTAlBUMQswCQYDVQQIEwJMWDEPMA0GA1UEBxMGTGlzYm9uMQwwCgYDVQQK
+EwNJU1QxDzANBgNVBAMTBklTVCBDQTElMCMGCSqGSIb3DQEJARYWZGlyZWN0b3JA
+Y29udGF0dWRvLmdzcoIJAIzs9gC2DXrgMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsG
+A1UdDwQEAwIFoDANBgkqhkiG9w0BAQUFAAOBgQB3Fbu935xouDzZn4hd9SnkVe+5
+/Bw9r4nB9WjB0aWCSf2xMx1gZdsJGaBiLWNg/2cglPKGAC8jQnZCgB8gxf5gdgE6
++A7BECQxCABuAK5uykw/eYt+hcMx3/GY3VcLQgbrd39DauyCIa19XZyr5dBIrsts
+Z73JTKtSGgsr1iwLjA==
+-----END CERTIFICATE-----

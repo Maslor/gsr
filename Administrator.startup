@@ -4,3 +4,7 @@ ip route add default via 10.0.0.65
 
 chmod 700 /root/.ssh
 chmod 700 /root/.ssh/*
+
+chmod 700 /root/c*
+
+dpkg -i openresolv_3.5.2-1_all.deb

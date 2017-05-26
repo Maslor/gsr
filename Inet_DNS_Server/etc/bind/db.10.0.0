@@ -12,7 +12,31 @@ $TTL    1
 21          PTR        .
 21          PTR        ROOT-SERVER.gsr.
 1           PTR        nsext.bomcliente.gsr.
+2           PTR        epc.bomcliente.gsr.
 129         PTR        nshq.contatudo.gsr.
 130         PTR        nshq2.contatudo.gsr.
+131         PTR        proxy.contatudo.gsr.
+145         PTR        pcaccountant.contatudo.gsr.
+146         PTR        pcdirector.contatudo.gsr.
+147         PTR        pchr.contatudo.gsr.
+161         PTR        o1v1.contatudo.gsr.
+162         PTR        o1v2.contatudo.gsr.
+177         PTR        o2v1.contatudo.gsr.
+178         PTR        o2v2.contatudo.gsr.
+129         PTR        mail.contatudo.gsr.
+129         PTR        imap.contatudo.gsr.
+129         PTR        pop.contatudo.gsr.
+130         PTR        www.contatudo.gsr.
+130         PTR        intranet.contatudo.gsr.
+130         PTR        clientes.contatudo.gsr.
+136         PTR        router.hq.
+152         PTR        router.hq.
+17         PTR        router.hq.
+18         PTR        router.internet.
+25         PTR        router.internet.
+22         PTR        router.internet.
+179         PTR        router.office2.
+163         PTR        router.office1.
+6         PTR        router.external.
 
 
