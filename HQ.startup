@@ -39,7 +39,7 @@ iptables -A FORWARD -i eth0 -s 10.0.0.176/29 -o ! eth5 -d 192.168.0.0/16 -j DROP
 iptables -A FORWARD -i eth0 -s 10.0.0.176/29 -o ! eth5 -p TCP --dport 23 -j DROP  #bloquear acesso a telnet 
 iptables -A FORWARD -i eth0 -s 10.0.0.176/29 -o ! eth5 -p TCP --dport 111 -j DROP #bloquear acesso a rpcbind 
 iptables -A FORWARD -i eth0 -s 10.0.0.176/29 -o ! eth5 -p TCP --dport 199 -j DROP #bloquear acesso a smux  
-
+iptables -A FORWARD -i eth0 -o eth5 -d 10.0.0.128/26 -j DROP #protecao contra spoofing
 
 #eth1 office1
 iptables -A FORWARD -i eth5 -o eth1 -d 10.0.0.160/29  -j ACCEPT 
@@ -47,6 +47,7 @@ iptables -A FORWARD -i eth1 -s 10.0.0.160/29 -o ! eth5 -d 192.168.0.0/16 -j DROP
 iptables -A FORWARD -i eth1 -s 10.0.0.160/29 -o ! eth5 -p TCP --dport 23 -j DROP  #bloquear acesso a telnet 
 iptables -A FORWARD -i eth1 -s 10.0.0.160/29 -o ! eth5 -p TCP --dport 111 -j DROP #bloquear acesso a rpcbind 
 iptables -A FORWARD -i eth1 -s 10.0.0.160/29 -o ! eth5 -p TCP --dport 199 -j DROP #bloquear acesso a smux 
+iptables -A FORWARD -i eth1 -o eth5 -d 10.0.0.128/26 -j DROP #protecao contra spoofing
 
 #eth2 private servers
 
@@ -63,12 +64,14 @@ iptables -A FORWARD -i eth5 -o eth3 -d 10.0.0.130 -s ! 10.0.0.128/26 -p TCP --dp
 iptables -A FORWARD -i eth5 -o eth3 -d 10.0.0.130 -s ! 10.0.0.128/26 -p UDP --dport 53 -j ACCEPT #dns 
 iptables -A FORWARD -i eth5 -o eth3 -d 10.0.0.130 -s ! 10.0.0.128/26 -p TCP --dport 80 -j ACCEPT #http  
 iptables -A FORWARD -i eth5 -o eth3 -d 10.0.0.130 -s ! 10.0.0.128/26 -p TCP --dport 443 -j ACCEPT #https 
-iptables -A FORWARD -i eth5 -o eth3 -d 10.0.0.130 -s ! 10.0.0.128/26 -p UDP --dport 1194 -j ACCEPT #vpn VERIFICAR
+iptables -A FORWARD -i eth5 -o eth3 -d 10.0.0.130 -s ! 10.0.0.128/26 -p UDP --dport 1194 -j ACCEPT #vpn
  
 iptables -A FORWARD -i eth5 -o eth3 -d 10.0.0.131 -s ! 10.0.0.128/26 -p TCP --dport 22 -j ACCEPT #ssh    
 
-#eth4 admin services 
+iptables -A FORWARD -i eth3 -o eth5 -d 10.0.0.128/26 -j DROP #protecao contra spoofing
 
+#eth4 admin services 
+iptables -A FORWARD -i eth4 -o eth5 -d 10.0.0.128/26 -j DROP #protecao contra spoofing
 
 #drops
 iptables -A FORWARD -s 192.168.0.0/16 -o eth5 -j DROP
