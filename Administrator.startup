@@ -6,3 +6,5 @@ chmod 700 /root/.ssh
 chmod 700 /root/.ssh/*
 
 chmod 700 /root/c*
+
+dpkg -i openresolv_3.5.2-1_all.deb
