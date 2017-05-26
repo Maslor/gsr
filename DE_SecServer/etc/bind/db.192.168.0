@@ -1,0 +1,20 @@
+$TTL    60000
+$ORIGIN 0.168.192.in-addr.arpa.
+@               IN      SOA    	nshq.contatudo.gsr.    root.nshq.contatudo.gsr. (
+                        2017042202 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@           IN      NS      nshq.contatudo.gsr.
+@           IN      NS      nshq2.contatudo.gsr.
+
+2         IN      PTR       fileserver.contatudo.gsr.
+1         IN      PTR       monitoring.contatudo.gsr.
+6         IN      PTR       router.hq.
+13         IN      PTR       router.office1.
+21         IN      PTR       router.office2.
+
+
+
