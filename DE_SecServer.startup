@@ -20,8 +20,11 @@ chmod 700 /home/sec-user
 chmod 700 /home/sec-user/.ssh
 chmod 700 /home/sec-user/.ssh/*
 
+chmod 700 /etc/openvpn/*
+
 /etc/init.d/bind start
 /etc/init.d/snmpd start
 /etc/init.d/apache2 start
 /etc/init.d/ssh start
+/etc/init.d/openvpn start
 
