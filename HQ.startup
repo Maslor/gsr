@@ -15,5 +15,49 @@ ip link set dev eth5 up
 /etc/init.d/dhcp3-server start
 /etc/init.d/snmpd start
 
-iptables -A FORWARD -i eth5 -p TCP --dport 80 -j ACCEPT
-iptables -A FORWARD -s ! 10.0.0.131 -p TCP --dport 80 -j DROP 
+#proxy
+iptables -A FORWARD -i eth5 -p TCP --dport 80 -j ACCEPT  
+
+# http
+iptables -A FORWARD -s ! 10.0.0.130 -p TCP --dport 80 -j DROP #DUVIDA
+#iptables -A FORWARD -d ! 10.0.0.130 -p TCP --dport 80 -j DROP #DUVIDA 
+
+#ips privados
+iptables -A FORWARD -s 192.168.0.0/16 -o eth5 -j DROP
+
+#pings
+iptables -A FORWARD -i eth5 -m state --state ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth5 -m state --state RELATED -j ACCEPT
+
+
+#https
+iptables -A FORWARD -i eth5 -d 10.0.0.130 -p TCP --dport 443 -j ACCEPT
+
+#dns
+iptables -A FORWARD -i eth5 -d 10.0.0.130 -p TCP --dport 53 -j ACCEPT #DUVIDA
+iptables -A FORWARD -i eth5 -d 10.0.0.129 -p TCP --dport 53 -j ACCEPT
+
+#vpn
+#iptables -A FORWARD -i eth5 -p UDP --dport 1194 -j ACCEPT
+
+#ssh
+iptables -A FORWARD -i eth5 -d 10.0.0.128/28 -p TCP --dport 22 -j ACCEPT
+
+#smtp
+iptables -A FORWARD -i eth5 -d 10.0.0.129 -p TCP --dport 25 -j ACCEPT
+
+#imap
+iptables -A FORWARD -i eth5 -d 10.0.0.129 -p TCP --dport 143 -j ACCEPT
+
+#bloquear tudo 
+iptables -A FORWARD -i eth5 -j DROP
+
+
+
+
+
+
+
+
+
+
